@@ -6,14 +6,16 @@ import Categorias from './pages/List/index'
 
 function App() {
   return (
-    <BrowserRouter>
-    <List />
-      <div>
-        <Switch>
-          <Route path={"product/{id}"} component={Categorias} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Route exact path="/" component={List} />
+        {/* <div>
+          <Switch>
+           <Route path="/{id}" exact component={Categorias} />
+          </Switch>
+        </div> */}
+      </BrowserRouter>
+    </>
   );
 }
 
